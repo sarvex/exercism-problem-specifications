@@ -1,0 +1,156 @@
+{
+  "exercise": "parallel-letter-frequency",
+  "cases": [
+    {
+      "uuid": "c054d642-c1fa-4234-8007-9339f2337886",
+      "description": "no texts",
+      "property": "calculateFrequencies",
+      "input": {
+        "texts": []
+      },
+      "expected": {}
+    },
+    {
+      "uuid": "818031be-49dc-4675-b2f9-c4047f638a2a",
+      "description": "one text with one letter",
+      "property": "calculateFrequencies",
+      "input": {
+        "texts": ["a"]
+      },
+      "expected": {
+        "a": 1
+      }
+    },
+    {
+      "uuid": "c0b81d1b-940d-4cea-9f49-8445c69c17ae",
+      "description": "one text with multiple letters",
+      "property": "calculateFrequencies",
+      "input": {
+        "texts": ["bbcccd"]
+      },
+      "expected": {
+        "b": 2,
+        "c": 3,
+        "d": 1
+      }
+    },
+    {
+      "uuid": "708ff1e0-f14a-43fd-adb5-e76750dcf108",
+      "description": "two texts with one letter",
+      "property": "calculateFrequencies",
+      "input": {
+        "texts": ["e", "f"]
+      },
+      "expected": {
+        "e": 1,
+        "f": 1
+      }
+    },
+    {
+      "uuid": "1b5c28bb-4619-4c9d-8db9-a4bb9c3bdca0",
+      "description": "two texts with multiple letters",
+      "property": "calculateFrequencies",
+      "input": {
+        "texts": ["ggh", "hhi"]
+      },
+      "expected": {
+        "g": 2,
+        "h": 3,
+        "i": 1
+      }
+    },
+    {
+      "uuid": "6366e2b8-b84c-4334-a047-03a00a656d63",
+      "description": "ignore letter casing",
+      "property": "calculateFrequencies",
+      "input": {
+        "texts": ["m", "M"]
+      },
+      "expected": {
+        "m": 2
+      }
+    },
+    {
+      "uuid": "92ebcbb0-9181-4421-a784-f6f5aa79f75b",
+      "description": "ignore whitespace",
+      "property": "calculateFrequencies",
+      "input": {
+        "texts": ["   ", "\t", "\r\n"]
+      },
+      "expected": {}
+    },
+    {
+      "uuid": "bc5f4203-00ce-4acc-a5fa-f7b865376fd9",
+      "description": "ignore punctuation",
+      "property": "calculateFrequencies",
+      "input": {
+        "texts": ["!", "?", ";", ",", "."]
+      },
+      "expected": {}
+    },
+    {
+      "uuid": "68032b8b-346b-4389-a380-e397618f6831",
+      "description": "ignore numbers",
+      "property": "calculateFrequencies",
+      "input": {
+        "texts": ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+      },
+      "expected": {}
+    },
+    {
+      "uuid": "aa9f97ac-3961-4af1-88e7-6efed1bfddfd",
+      "description": "non-ascii letters",
+      "property": "calculateFrequencies",
+      "input": {
+        "texts": ["本", "φ", "ほ", "ø"]
+      },
+      "expected": {
+        "本": 1,
+        "φ": 1,
+        "ほ": 1,
+        "ø": 1
+      }
+    },
+    {
+      "uuid": "4727f020-df62-4dcf-99b2-a6e58319cb4f",
+      "description": "large texts",
+      "property": "calculateFrequencies",
+      "input": {
+        "texts": [
+          "Freude schöner Götterfunken\nTochter aus Elysium\nWir betreten feuertrunken,\nHimmlische, dein Heiligtum!\nDeine Zauber binden wieder\nWas die Mode streng geteilt;\nAlle Menschen werden Brüder,\nWo dein sanfter Flügel weilt.",
+          "Wilhelmus van Nassouwe\nben ik, van Duitsen bloed,\nden vaderland getrouwe\nblijf ik tot in den dood.\nEen Prinse van Oranje\nben ik, vrij, onverveerd,\nden Koning van Hispanje\nheb ik altijd geëerd.",
+          "O say can you see by the dawn's early light,\nWhat so proudly we hailed at the twilight's last gleaming,\nWhose broad stripes and bright stars through the perilous fight,\nO'er the ramparts we watched, were so gallantly streaming?\nAnd the rockets' red glare, the bombs bursting in air,\nGave proof through the night that our flag was still there;\nO say does that star-spangled banner yet wave,\nO'er the land of the free and the home of the brave?"
+        ]
+      },
+      "expected": {
+        "a": 49,
+        "b": 17,
+        "c": 7,
+        "d": 34,
+        "e": 102,
+        "f": 12,
+        "g": 24,
+        "h": 37,
+        "i": 42,
+        "j": 5,
+        "k": 8,
+        "l": 32,
+        "m": 12,
+        "n": 51,
+        "o": 34,
+        "p": 8,
+        "r": 50,
+        "s": 38,
+        "t": 56,
+        "u": 19,
+        "v": 11,
+        "w": 19,
+        "y": 9,
+        "z": 1,
+        "ë": 1,
+        "ö": 2,
+        "ü": 2
+      }
+    }
+  ]
+}
