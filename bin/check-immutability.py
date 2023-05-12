@@ -38,15 +38,15 @@ for case in old:
             fails.add(uuid)
             break
 
-if len(fails) == 0 and len(deleted) == 0:
+if not fails and not deleted:
     sys.exit(0)
 
-if len(fails) > 0:
+if fails:
     print('The following tests contain illegal mutations:')
     for failure in fails:
         print(f" - {failure} ({new[failure]['description']})")
 
-if len(deleted) > 0:
+if deleted:
     print('The following tests have been deleted illegally:')
     for deletion in deleted:
         print(f" - {deletion}")
